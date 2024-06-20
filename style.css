@@ -104,7 +104,7 @@ grid-template-areas:
     grid-area: animal-2;
     width: 100%;
     height: auto;
-}
+}   
 
 .foto-animal-3 {
     height: 200px;
@@ -113,10 +113,10 @@ grid-template-areas:
     height: auto;
 }
 
-/* Estilos para móviles */
+/* PÁGINA FOTOGRAFIA DE ANIMALES PARA VERSION MOBILE */
 @media (max-width: 600px) {
     .grid-container-animales {
-        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        grid-template-columns: 1fr; 
         grid-template-rows: auto auto auto; 
         gap: 5px; 
         grid-template-areas: 
