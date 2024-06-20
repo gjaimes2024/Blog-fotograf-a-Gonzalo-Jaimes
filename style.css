@@ -1,0 +1,230 @@
+/* TITULO PAGINA PRINCIAPAL */
+.titulo-principal{
+    background-color: blueviolet;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 100px;
+
+}
+/* MENU */
+.menu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;  
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(175, 24, 94);
+    border-radius: 20px;
+    font-size: 20px;
+}
+.menu li{
+    margin: 0 20px;
+}
+
+menu a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    list-style:none;
+}
+
+
+/* ENLACES PAGINA PRINCIPAL */
+.tipos ul{
+    text-decoration:none;
+    list-style: none;
+    text-align: center;
+    color: black;
+    
+}
+.enlace-animales{
+    background-color: coral;
+    font-size: 100px;
+}
+.enlace-nocturna{
+    background-color: brown;
+    
+}
+.enlace-paisajes{
+    background-color: darkgoldenrod;
+}
+.enlace-sobre-mi{
+    background-color: green;
+}
+.tipos li{
+    margin: 10px 0  ;
+    font-size: 50px;
+    
+}
+.tipos a{
+    text-decoration: none;
+    color: black;
+    border-radius: 50px;
+    text-align: center;
+    height: 80px;
+    width: fit-content;    
+
+}
+.lista{
+    text-decoration: none;
+    height:50px;
+    
+}
+
+
+/* PARA     QUE     NINGUN      ENLACE      TENGA   SUB Y AZUL */
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+/* GRID FOTOS ANMALES */
+
+.grid-container-animales {   
+display: grid; 
+grid-template-columns: 1fr 1fr ; 
+grid-template-rows: auto auto; 
+gap: 5px 5px; 
+grid-template-areas: 
+        "animal-1      animal-2"
+        "animal-3      animal-3"; 
+}
+.foto-animal-1 {
+    height: 200px;
+    grid-area: animal-1;
+    width: 100%;
+    height: auto;
+}
+.foto-animal-2 {
+    height: 200px;
+    grid-area: animal-2;
+    width: 100%;
+    height: auto;
+}
+
+.foto-animal-3 {
+    height: 200px;
+    grid-area: animal-3;
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+    .grid-container-animales {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        grid-template-rows: auto auto auto; 
+        gap: 5px; 
+        grid-template-areas: 
+            "animal-1"
+            "animal-2"
+            "animal-3"; 
+    }
+}
+
+
+/* GRID FOTOS NOCTURNAS */
+.grid-container-nocturno {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr ; 
+    grid-template-rows: auto auto auto; 
+    gap: 5px 5px; 
+    grid-template-areas: 
+        "nocturno-1      nocturno-2     nocturno-3"
+        "nocturno-5      nocturno-6     nocturno-4"
+        "nocturno-7      nocturno-7     nocturno-7";
+}
+.foto-nocturna-1{
+    
+    grid-area: nocturno-1;
+    width: 100%;
+    height: auto;
+}
+
+.foto-nocturna-2{
+
+    grid-area: nocturno-2;
+    width: 100%;
+    height: auto;
+    
+}
+
+
+.foto-nocturna-3{
+    grid-area: nocturno-3;
+    width: 100%;
+    height: auto;
+}
+
+.foto-nocturna-4{
+    grid-area: nocturno-4;
+    width: 100%;
+    height: auto;
+}
+
+.foto-nocturna-5{
+    grid-area: nocturno-5;
+    width: 100%;
+    height: auto;
+}
+
+.foto-nocturna-6{
+    grid-area: nocturno-6;
+    width: 100%;
+    height: auto;
+}
+
+.foto-nocturna-7{
+    grid-area: nocturno-7;
+    width: 100%;
+    height: auto;
+    
+}
+/* PAGINA FOTOGRAFIA NOCTURNA PARA VERSION MOBILE */
+@media (max-width: 600px) {
+    .grid-container-nocturno {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        gap: 5px; 
+        grid-template-areas: 
+            "nocturno-1"
+            "nocturno-2"
+            "nocturno-3"
+            "nocturno-5"
+            "nocturno-6"
+            "nocturno-4"
+            "nocturno-7";
+    }
+
+    .foto-nocturna-1 {
+        grid-area: nocturno-1;
+    }
+
+    .foto-nocturna-2 {
+        grid-area: nocturno-2;
+    }
+
+    .foto-nocturna-3 {
+        grid-area: nocturno-3;
+    }
+
+    .foto-nocturna-4 {
+        grid-area: nocturno-4;
+    }
+
+    .foto-nocturna-5 {
+        grid-area: nocturno-5;
+    }
+
+    .foto-nocturna-6 {
+        grid-area: nocturno-6;
+    }
+
+    .foto-nocturna-7 {
+        grid-area: nocturno-7;
+    }
+}
