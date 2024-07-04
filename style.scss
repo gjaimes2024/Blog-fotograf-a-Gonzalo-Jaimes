@@ -1,0 +1,214 @@
+// Variables
+$primary-color: blueviolet;
+$secondary-color: rgb(175, 24, 94);
+$text-color: black;
+$border-radius: 20px;
+$font-size-large: 100px;
+$font-size-medium: 50px;
+$font-size-small: 20px;
+
+// Mixin
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}git branch -vv
+
+// Global Styles
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+// TITULO PAGINA PRINCIPAL
+.titulo-principal {
+  background-color: $primary-color;
+  box-sizing: border-box;
+  @include border-radius($border-radius);
+  text-align: center;
+  font-size: $font-size-large;
+}
+
+// MENU
+.menu {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $secondary-color;
+    @include border-radius($border-radius);
+    font-size: $font-size-small;
+  }
+
+  li {
+    margin: 0 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    padding: 10px 15px;
+    list-style: none;
+  }
+}
+
+// ENLACES PAGINA PRINCIPAL
+.tipos {
+  ul {
+    list-style: none;
+    text-align: center;
+    color: $text-color;
+  }
+
+  .enlace-animales {
+    background-color: coral;
+    font-size: $font-size-large;
+  }
+
+  .enlace-nocturna {
+    background-color: brown;
+  }
+
+  .enlace-paisajes {
+    background-color: darkgoldenrod;
+  }
+
+  .enlace-sobre-mi {
+    background-color: green;
+  }
+
+  li {
+    margin: 10px 0;
+    font-size: $font-size-medium;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    @include border-radius(50px);
+    text-align: center;
+    height: 80px;
+    width: fit-content;
+  }
+}
+
+.lista {
+  height: 50px;
+}
+
+// GRID FOTOS ANIMALES
+.grid-container-animales {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 5px 5px;
+  grid-template-areas:
+    "animal-1 animal-2"
+    "animal-3 animal-3";
+
+  .foto-animal-1 {
+    height: 200px;
+    grid-area: animal-1;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-animal-2 {
+    height: 200px;
+    grid-area: animal-2;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-animal-3 {
+    height: 200px;
+    grid-area: animal-3;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// GRID FOTOS ANIMALES PARA VERSION MOBILE
+@media (max-width: 600px) {
+  .grid-container-animales {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    grid-template-areas:
+      "animal-1"
+      "animal-2"
+      "animal-3";
+  }
+}
+
+// GRID FOTOS NOCTURNAS
+.grid-container-nocturno {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 5px 5px;
+  grid-template-areas:
+    "nocturno-1 nocturno-2 nocturno-3"
+    "nocturno-5 nocturno-6 nocturno-4"
+    "nocturno-7 nocturno-7 nocturno-7";
+
+  .foto-nocturna-1 {
+    grid-area: nocturno-1;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-nocturna-2 {
+    grid-area: nocturno-2;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-nocturna-3 {
+    grid-area: nocturno-3;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-nocturna-4 {
+    grid-area: nocturno-4;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-nocturna-5 {
+    grid-area: nocturno-5;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-nocturna-6 {
+    grid-area: nocturno-6;
+    width: 100%;
+    height: auto;
+  }
+
+  .foto-nocturna-7 {
+    grid-area: nocturno-7;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// GRID FOTOS NOCTURNAS PARA VERSION MOBILE
+@media (max-width: 600px) {
+  .grid-container-nocturno {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 5px;
+    grid-template-areas:
+      "nocturno-1"
+      "nocturno-2"
+      "nocturno-3"
+      "nocturno-5"
+      "nocturno-6"
+      "nocturno-4"
+      "nocturno-7";
+  }
+}
